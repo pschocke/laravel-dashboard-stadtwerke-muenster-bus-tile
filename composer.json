@@ -1,0 +1,59 @@
+{
+  "name": "pschocke/laravel-dashboard-stadtwerke-muenster-bus-tile",
+  "description": "A bus tile for Münster",
+  "keywords": [
+    "astrotomic",
+    "laravel-dashboard",
+    "laravel-dashboard-tile",
+    "laravel-dashboard-muenster-tile",
+    "Stadtwerke Münster"
+  ],
+  "homepage": "https://github.com/pschocke/laravel-dashboard-stadtwerke-muenster-bus-tile",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Patrick Schocke",
+      "email": "patrick@ausbildung-ms.de",
+      "homepage": "https://github.com/pschocke",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "guzzlehttp/guzzle": "^6.5",
+    "illuminate/console": "^7.0",
+    "illuminate/http": "^7.0",
+    "illuminate/support": "^7.0",
+    "spatie/laravel-dashboard": "^1.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^5.0",
+    "phpunit/phpunit": "^9.0"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pschocke\\MuensterBusTile\\MuensterBusTileServiceProvider"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Pschocke\\MuensterBusTile\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pschocke\\MuensterBusTile\\Tests\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  }
+}
